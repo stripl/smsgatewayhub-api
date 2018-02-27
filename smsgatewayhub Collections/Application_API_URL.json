@@ -1,0 +1,85 @@
+{
+  "info": {
+    "name": "Application API URL",
+    "_postman_id": "5ffcc6ec-11fa-a66a-86ec-5caf6c057ed5",
+    "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "9b70a3c3-b91f-7e1f-cfa6-930154ed5242",
+      "name": "https://www.smsgatewayhub.com/api/mt/SendSMS",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "https://www.smsgatewayhub.com/api/mt/SendSMS?APIKey=your API KEY&senderid=Senderid&channel=2&DCS=0&flashsms=0&number=90000000001&text=Your sms content\n&route=1",
+          "protocol": "https",
+          "host": [
+            "www",
+            "smsgatewayhub",
+            "com"
+          ],
+          "path": [
+            "api",
+            "mt",
+            "SendSMS"
+          ],
+          "query": [
+            {
+              "key": "APIKey",
+              "value": "your API KEY",
+              "equals": true,
+              "description": "Instead of the username and password you can use the API KEY for authentication of account."
+            },
+            {
+              "key": "senderid",
+              "value": "Senderid",
+              "equals": true,
+              "description": "Approved sender id(6 characters string only).\n"
+            },
+            {
+              "key": "channel",
+              "value": "2",
+              "equals": true,
+              "description": "Message channel Promotional=1 or Transactional=2\n"
+            },
+            {
+              "key": "DCS",
+              "value": "0",
+              "equals": true,
+              "description": "Data coding value (Default is 0 for normal message, Set 8 for unicode sms)\n"
+            },
+            {
+              "key": "flashsms",
+              "value": "0",
+              "equals": true,
+              "description": "Flash message immediate display (Default is 0 for normal sms, Set 1 for immediate display)\n"
+            },
+            {
+              "key": "number",
+              "value": "90000000001",
+              "equals": true,
+              "description": "Recipient mobile number (pass with comma seprated if need to send on more then one number)\n"
+            },
+            {
+              "key": "text",
+              "value": "Your sms content\n",
+              "equals": true,
+              "description": "Your sms content\n"
+            },
+            {
+              "key": "route",
+              "value": "1",
+              "equals": true,
+              "description": "Pass the route id in this parameter to route the message. Click Here for more information regarding your routeid.\n"
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
+    }
+  ]
+}
