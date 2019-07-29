@@ -1,0 +1,11 @@
+CURL *hnd = curl_easy_init();
+
+curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "POST");
+curl_easy_setopt(hnd, CURLOPT_URL, "https://www.smsgatewayhub.com/api/mt/SendSMS?APIKey=yourapikey&senderid=TESTIN&channel=OTP&DCS=0&flashsms=0&number=919907922122&text=Test%20from%20smsgatewayhub&route=0");
+
+struct curl_slist *headers = NULL;
+headers = curl_slist_append(headers, "Postman-Token: 72d65d3a-df4e-40f1-b7ac-6bac6aba2426");
+headers = curl_slist_append(headers, "cache-control: no-cache");
+curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
+
+CURLcode ret = curl_easy_perform(hnd);
